@@ -1,0 +1,8 @@
+train: C:\Users\xiang\Desktop\train\YOLODataset/images/train/
+val: C:\Users\xiang\Desktop\train\YOLODataset/images/val/
+
+nc: 2
+
+names:
+  0: leaf
+  1: Gray leaf spot of Anhui peppermint

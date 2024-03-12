@@ -1,0 +1,16 @@
+
+path: D:\selectImg\2024_2_17_dataset\split  # dataset root dir
+train: images/train  # train images (relative to 'path') 4 images
+val: images/val  # val images (relative to 'path') 4 images
+
+nc: 10  # number of classes
+names: ["aster tataricus",
+        "chrysanthemum",
+        "digitalis purpurea",
+        "glycyrrhiza uralensis",
+        "mint",
+        "paeonia",
+        "salvia",
+        "sanguisorba",
+        "saposhnikovia",
+        "spot"]
