@@ -920,9 +920,9 @@ if __name__ == '__main__':
                     'random_grayscale', 'gaussian_blur', 'random_invert', 'random_cutout', 'random_erasing',
                     'random_bright', 'random_contrast', 'random_saturation', 'add_gasuss_noise', 'add_salt_noise',
                     'add_pepper_noise', 'mixup', 'random_perspective', 'random_rotate', 'mosaic']
-    rootpath = r'D:\selectImg\dealImg'
+    rootpath = r'D:\selectImg\dealImgV2'
     meth = ['resize_', 'random_flip_horizon', 'random_flip_vertical', 'center_crop', 'gaussian_blur',
             'random_bright', 'random_contrast']
     # for path in os.listdir(rootpath):
     #     create_datasets(method=meth, extimes=15, path=os.path.join(rootpath, path))
-    create_datasets(method=meth, extimes=15, path=r"D:\selectImg\dealImg\paeonia")
+    create_datasets(method=meth, extimes=15, path=r"D:\selectImg\forVal")

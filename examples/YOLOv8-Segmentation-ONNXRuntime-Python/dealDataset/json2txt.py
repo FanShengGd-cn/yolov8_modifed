@@ -12,24 +12,24 @@ def json_to_txt_v8(path_A, path_B):
             pass
         else:
             name = os.path.join(path_A, i + '.json')
-            print("name", name)
+            # print("name", name)
             save_name = os.path.join(path_B, i + '.txt')
-            print("save_name", save_name)
+            # print("save_name", save_name)
             with open(name, 'r') as f:
                 data = json.load(f)
-                print("" + data.get('version'))
-                print("flags略")
-                print("shapes略")
-                print("" + data.get('imagePath'))
-                print("imageData=略")
-                print("" + str(data['imageHeight']))
-                print("" + str(data['imageWidth']))
+                # print("" + data.get('version'))
+                # print("flags略")
+                # print("shapes略")
+                # print("" + data.get('imagePath'))
+                # print("imageData=略")
+                # print("" + str(data['imageHeight']))
+                # print("" + str(data['imageWidth']))
                 H = data.get('imageHeight')
                 W = data.get('imageWidth')
                 classes = ["aster tataricus", "chrysanthemum", "digitalis purpurea", "glycyrrhiza uralensis",
                            "mint", "paeonia","salvia", "sanguisorba","saposhnikovia", "spot"]
                 locals_items = data['shapes'][0].keys()
-                print("locals_items=", locals_items)
+                # print("locals_items=", locals_items)
                 for k in data['shapes']:
                     # bug  下标不在列表中
                     point_arr = []
@@ -59,7 +59,7 @@ def json_to_txt_v8(path_A, path_B):
 
 
 if __name__ == "__main__":
-    root_path = r'D:\selectImg\dealImg\saposhnikovia\create'
+    root_path = r'D:\selectImg\2024_3_15dataset\val'
     path_A = 'json'
     path_B = 'labels'
     if not os.path.exists(os.path.join(root_path, path_A)):

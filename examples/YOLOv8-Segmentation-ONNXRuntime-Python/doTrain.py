@@ -3,7 +3,7 @@ from ultralytics import YOLO
 if __name__ == '__main__':
     # 加载模型
     # model = YOLO(r'yolov8-seg.yaml')  # 不使用预训练权重训练
-    model = YOLO(r'yolov8-seg-del.yaml').load("yolov8n-seg.pt")  # 使用预训练权重训练
+    model = YOLO(r'yolov8-my-seg.yaml').load("yolov8n-seg.pt")  # 使用预训练权重训练
     # 训练参数 ----------------------------------------------------------------------------------------------
     model.train(
         data=r'tjau-herbs-seg.yaml',
@@ -46,26 +46,26 @@ if __name__ == '__main__':
         warmup_epochs=3.0,  # (float) 预热周期（分数可用）
         warmup_momentum=0.8,  # (float) 预热初始动量
         warmup_bias_lr=0.1,  # (float) 预热初始偏置学习率
-        box=7.5,  # (float) 盒损失增益
-        cls=0.5,  # (float) 类别损失增益（与像素比例）
-        dfl=1.5,  # (float) dfl损失增益
-        pose=12.0,  # (float) 姿势损失增益
-        kobj=1.0,  # (float) 关键点对象损失增益
-        label_smoothing=0.0,  # (float) 标签平滑（分数）
-        nbs=64,  # (int) 名义批量大小
-        hsv_h=0.015,  # (float) 图像HSV-Hue增强（分数）
-        hsv_s=0.7,  # (float) 图像HSV-Saturation增强（分数）
-        hsv_v=0.4,  # (float) 图像HSV-Value增强（分数）
-        degrees=0.0,  # (float) 图像旋转（+/- deg）
-        translate=0.1,  # (float) 图像平移（+/- 分数）
-        scale=0.5,  # (float) 图像缩放（+/- 增益）
-        shear=0.0,  # (float) 图像剪切（+/- deg）
-        perspective=0.0,  # (float) 图像透视（+/- 分数），范围为0-0.001
-        flipud=0.0,  # (float) 图像上下翻转（概率）
-        fliplr=0.5,  # (float) 图像左右翻转（概率）
-        mosaic=1.0,  # (float) 图像马赛克（概率）
-        mixup=0.0,  # (float) 图像混合（概率）
-        copy_paste=0.0,  # (float) 分割复制-粘贴（概率）
+        # box=7.5,  # (float) 盒损失增益
+        # cls=0.5,  # (float) 类别损失增益（与像素比例）
+        # dfl=1.5,  # (float) dfl损失增益
+        # pose=12.0,  # (float) 姿势损失增益
+        # kobj=1.0,  # (float) 关键点对象损失增益
+        # label_smoothing=0.0,  # (float) 标签平滑（分数）
+        # nbs=64,  # (int) 名义批量大小
+        # hsv_h=0.015,  # (float) 图像HSV-Hue增强（分数）
+        # hsv_s=0.7,  # (float) 图像HSV-Saturation增强（分数）
+        # hsv_v=0.4,  # (float) 图像HSV-Value增强（分数）
+        # degrees=0.0,  # (float) 图像旋转（+/- deg）
+        # translate=0.1,  # (float) 图像平移（+/- 分数）
+        # scale=0.5,  # (float) 图像缩放（+/- 增益）
+        # shear=0.0,  # (float) 图像剪切（+/- deg）
+        # perspective=0.0,  # (float) 图像透视（+/- 分数），范围为0-0.001
+        # flipud=0.0,  # (float) 图像上下翻转（概率）
+        # fliplr=0.5,  # (float) 图像左右翻转（概率）
+        # mosaic=1.0,  # (float) 图像马赛克（概率）
+        # mixup=0.0,  # (float) 图像混合（概率）
+        # copy_paste=0.0,  # (float) 分割复制-粘贴（概率）
     )
 
 
